@@ -1,0 +1,313 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>API Reference &#8212; Cechmate 0.0.3 documentation</title>
+    <link rel="stylesheet" href="_static/better.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Basic Usage" href="notebooks/BasicUsage.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style type="text/css">.logo { width:100%; }</style>
+  </head><body>
+  <div class="related top">
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="notebooks/BasicUsage.html" title="Previous document">Basic Usage</a>
+        </li>
+    </ul>
+  </nav>
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Cechmate 0.0.3 documentation</a></li> 
+    </ul>
+  </nav>
+  </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="#filtrations">Filtrations</a></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cechmate.filtrations.Alpha" title="cechmate.filtrations.Alpha"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cechmate.filtrations.Alpha</span></code></a></td>
+<td>Construct an Alpha filtration from the given data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cechmate.filtrations.Rips" title="cechmate.filtrations.Rips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cechmate.filtrations.Rips</span></code></a></td>
+<td>Construct a Rips filtration and the associated diagrams.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cechmate.filtrations.Cech" title="cechmate.filtrations.Cech"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cechmate.filtrations.Cech</span></code></a></td>
+<td>Compute the Cech filtration of a Euclidean point set for simplices up to order <cite>self.max_dim</cite>.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference internal" href="#solvers">Solvers</a></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cechmate.solver.phat_diagrams" title="cechmate.solver.phat_diagrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cechmate.solver.phat_diagrams</span></code></a></td>
+<td>Do a custom filtration wrapping around phat</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="module-cechmate.filtrations">
+<span id="filtrations"></span><h2>Filtrations<a class="headerlink" href="#module-cechmate.filtrations" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="cechmate.filtrations.Alpha">
+<em class="property">class </em><code class="descclassname">cechmate.filtrations.</code><code class="descname">Alpha</code><a class="reference internal" href="_modules/cechmate/filtrations/alpha.html#Alpha"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.filtrations.Alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct an Alpha filtration from the given data.</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cechmate.filtrations.Alpha.build" title="cechmate.filtrations.Alpha.build"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build</span></code></a></td>
+<td>Do the Alpha filtration of a Euclidean point set (requires scipy)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cechmate.filtrations.Alpha.diagrams" title="cechmate.filtrations.Alpha.diagrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diagrams</span></code></a></td>
+<td>Compute persistence diagrams for the simplices.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="cechmate.filtrations.Alpha.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cechmate/filtrations/alpha.html#Alpha.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.filtrations.Alpha.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do the Alpha filtration of a Euclidean point set (requires scipy)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>X</strong> (<em>Nxd array</em>) – Array of N Euclidean vectors in d dimensions</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cechmate.filtrations.Alpha.diagrams">
+<code class="descname">diagrams</code><span class="sig-paren">(</span><em>simplices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cechmate.filtrations.Alpha.diagrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute persistence diagrams for the simplices.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cechmate.filtrations.Rips">
+<em class="property">class </em><code class="descclassname">cechmate.filtrations.</code><code class="descname">Rips</code><span class="sig-paren">(</span><em>max_dim=3</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cechmate/filtrations/rips.html#Rips"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.filtrations.Rips" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a Rips filtration and the associated diagrams. abcabc</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">Rips</span><span class="p">(</span><span class="n">max_dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">simplices</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">diagrams</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">simplices</span><span class="p">)</span>
+</pre></div>
+</div>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cechmate.filtrations.Rips.build" title="cechmate.filtrations.Rips.build"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build</span></code></a></td>
+<td>Do the rips filtration of a Euclidean point set</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cechmate.filtrations.Rips.diagrams" title="cechmate.filtrations.Rips.diagrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diagrams</span></code></a></td>
+<td>Compute persistence diagrams for the simplices.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="cechmate.filtrations.Rips.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cechmate/filtrations/rips.html#Rips.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.filtrations.Rips.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do the rips filtration of a Euclidean point set</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>X</strong> – An Nxd array of N Euclidean vectors in d dimensions</li>
+<li><strong>Y</strong> – Another one</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Rips filtration for the data X</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">simplices</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cechmate.filtrations.Rips.diagrams">
+<code class="descname">diagrams</code><span class="sig-paren">(</span><em>simplices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cechmate.filtrations.Rips.diagrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute persistence diagrams for the simplices.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cechmate.filtrations.Cech">
+<em class="property">class </em><code class="descclassname">cechmate.filtrations.</code><code class="descname">Cech</code><span class="sig-paren">(</span><em>max_dim=3</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cechmate/filtrations/cech.html#Cech"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.filtrations.Cech" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the Cech filtration of a Euclidean point set for simplices up to order <cite>self.max_dim</cite>.</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cechmate.filtrations.Cech.build" title="cechmate.filtrations.Cech.build"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build</span></code></a></td>
+<td>Compute the Cech filtration of a Euclidean point set for simplices up to order <cite>self.max_dim</cite>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cechmate.filtrations.Cech.diagrams" title="cechmate.filtrations.Cech.diagrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diagrams</span></code></a></td>
+<td>Compute persistence diagrams for the simplices.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="cechmate.filtrations.Cech.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cechmate/filtrations/cech.html#Cech.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.filtrations.Cech.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the Cech filtration of a Euclidean point set for simplices up to order <cite>self.max_dim</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>X</strong> (<em>An Nxd array of N Euclidean vectors in d dimensions</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>simplices</strong></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Cech filtration for the data X</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cechmate.filtrations.Cech.diagrams">
+<code class="descname">diagrams</code><span class="sig-paren">(</span><em>simplices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cechmate.filtrations.Cech.diagrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute persistence diagrams for the simplices.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cechmate.solver">
+<span id="solvers"></span><h2>Solvers<a class="headerlink" href="#module-cechmate.solver" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="cechmate.solver.phat_diagrams">
+<code class="descclassname">cechmate.solver.</code><code class="descname">phat_diagrams</code><span class="sig-paren">(</span><em>simplices</em>, <em>show_inf=False</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cechmate/solver.html#phat_diagrams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.solver.phat_diagrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do a custom filtration wrapping around phat</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>simplices</strong> (<em>A list of lists of simplices and their distances</em>) – the kth element is itself a list of tuples ([idx1, …, idxk], dist)
+where [idx1, …, idxk] is a list of vertices involved in the simplex
+and “dist” is the distance at which the simplex is added</li>
+<li><strong>show_inf</strong> (<em>Boolean</em>) – Whether or not to return points that never die</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>dgms</strong> – the persistence diagram for Hk</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">A dictionary of persistence diagrams, where dgms[k] is</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Cechmate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/BasicUsage.html">Basic Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-cechmate.filtrations">Filtrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-cechmate.solver">Solvers</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/reference.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<form class="search" action="search.html" method="get">
+  <input type="text" name="q"
+   placeholder="type to search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  <div class="related bottom">
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="notebooks/BasicUsage.html" title="Previous document">Basic Usage</a>
+        </li>
+    </ul>
+  </nav>
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Cechmate 0.0.3 documentation</a></li> 
+    </ul>
+  </nav>
+  </div>
+  <footer id="pagefooter">&copy; 2019, Chris Tralie and Nathaniel Saul.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a>
+      1.8.4
+        with the <a href="http://github.com/irskep/sphinx-better-theme">
+          better</a> theme.
+
+  </footer>
+
+  
+  </body>
+</html>
