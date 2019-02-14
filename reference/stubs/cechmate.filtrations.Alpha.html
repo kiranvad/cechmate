@@ -69,11 +69,16 @@
 <dt id="cechmate.filtrations.Alpha">
 <em class="property">class </em><code class="descclassname">cechmate.filtrations.</code><code class="descname">Alpha</code><a class="reference internal" href="../../_modules/cechmate/filtrations/alpha.html#Alpha"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.filtrations.Alpha" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an Alpha filtration from the given data.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">Alpha</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">simplices</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">diagrams</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">diagrams</span><span class="p">(</span><span class="n">simplices</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="method">
 <dt id="cechmate.filtrations.Alpha.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/cechmate/filtrations/alpha.html#Alpha.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.filtrations.Alpha.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>This __init__ is defined for alpha</p>
-</dd></dl>
+<dd></dd></dl>
 
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
@@ -83,7 +88,7 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#cechmate.filtrations.Alpha.__init__" title="cechmate.filtrations.Alpha.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</td>
-<td>This __init__ is defined for alpha</td>
+<td></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cechmate.filtrations.Alpha.build" title="cechmate.filtrations.Alpha.build"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build</span></code></a>(X)</td>
 <td>Do the Alpha filtration of a Euclidean point set (requires scipy)</td>
@@ -111,6 +116,14 @@
 <dt id="cechmate.filtrations.Alpha.diagrams">
 <code class="descname">diagrams</code><span class="sig-paren">(</span><em>simplices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cechmate.filtrations.Alpha.diagrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute persistence diagrams for the simplices.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>simplices</strong> – simplices or filtration built from <code class="code docutils literal notranslate"><span class="pre">build</span></code> method.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>

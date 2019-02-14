@@ -61,33 +61,30 @@
 
 
 <div class="viewcode-block" id="Rips"><a class="viewcode-back" href="../../../reference/stubs/cechmate.filtrations.Rips.html#cechmate.filtrations.Rips">[docs]</a><span class="k">class</span> <span class="nc">Rips</span><span class="p">(</span><span class="n">BaseFiltration</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Construct a Rips filtration and the associated diagrams. abcabc</span>
+    <span class="sd">&quot;&quot;&quot;Construct a Rips filtration and the associated diagrams.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    ========</span>
 
 <span class="sd">        &gt;&gt;&gt; r = Rips(max_dim=3)</span>
-<span class="sd">        &gt;&gt;&gt; simplices = r.fit(X)</span>
-<span class="sd">        &gt;&gt;&gt; diagrams = r.transform(simplices)</span>
+<span class="sd">        &gt;&gt;&gt; simplices = r.build(X)</span>
+<span class="sd">        &gt;&gt;&gt; diagrams = r.diagrams(simplices)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
 
 <div class="viewcode-block" id="Rips.build"><a class="viewcode-back" href="../../../reference/stubs/cechmate.filtrations.Rips.html#cechmate.filtrations.Rips.build">[docs]</a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Do the rips filtration of a Euclidean point set</span>
+        <span class="sd">&quot;&quot;&quot;Compute the rips filtration of a Euclidean point set.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ===========</span>
-<span class="sd">        X:</span>
-<span class="sd">            An Nxd array of N Euclidean vectors in d dimensions</span>
-<span class="sd">        Y: </span>
-<span class="sd">            Another one</span>
+<span class="sd">        X: An Nxd array</span>
+<span class="sd">            An Nxd array of N Euclidean vectors in d dimensions.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        ========</span>
-<span class="sd">        simplices:</span>
-<span class="sd">            Rips filtration for the data X</span>
+<span class="sd">        simplices: list of tuples</span>
+<span class="sd">            List of simplices with birth time representing Rips filtration for the data X.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">D</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getSSM</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
         <span class="n">N</span> <span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>

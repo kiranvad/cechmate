@@ -68,11 +68,29 @@
 <dl class="class">
 <dt id="cechmate.filtrations.Cech">
 <em class="property">class </em><code class="descclassname">cechmate.filtrations.</code><code class="descname">Cech</code><span class="sig-paren">(</span><em>max_dim=3</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/cechmate/filtrations/cech.html#Cech"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.filtrations.Cech" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the Cech filtration of a Euclidean point set for simplices up to order <cite>self.max_dim</cite>.</p>
+<dd><p>Compute the Cech filtration of a Euclidean point set for simplices up to order <code class="code docutils literal notranslate"><span class="pre">self.max_dim</span></code>.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">Cech</span><span class="p">(</span><span class="n">max_dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">simplices</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">diagrams</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">diagrams</span><span class="p">(</span><span class="n">simplices</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="method">
 <dt id="cechmate.filtrations.Cech.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>max_dim=3</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cechmate.filtrations.Cech.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>This init should show up inherited.</p>
+<dd><p>Default constructor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_dim</strong> (<em>int</em>) – Maximum dimension of simplices returned in constructed filtration.</li>
+<li><strong>verbose</strong> (<em>boolean</em>) – If True, then print logging statements.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <p class="rubric">Methods</p>
@@ -83,10 +101,10 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#cechmate.filtrations.Cech.__init__" title="cechmate.filtrations.Cech.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([max_dim,&nbsp;verbose])</td>
-<td>This init should show up inherited.</td>
+<td>Default constructor</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cechmate.filtrations.Cech.build" title="cechmate.filtrations.Cech.build"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build</span></code></a>(X)</td>
-<td>Compute the Cech filtration of a Euclidean point set for simplices up to order <cite>self.max_dim</cite>.</td>
+<td>Compute the Cech filtration of a Euclidean point set for simplices up to order <code class="code docutils literal notranslate"><span class="pre">self.max_dim</span></code>.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#cechmate.filtrations.Cech.diagrams" title="cechmate.filtrations.Cech.diagrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diagrams</span></code></a>([simplices])</td>
 <td>Compute persistence diagrams for the simplices.</td>
@@ -96,14 +114,14 @@
 <dl class="method">
 <dt id="cechmate.filtrations.Cech.build">
 <code class="descname">build</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/cechmate/filtrations/cech.html#Cech.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cechmate.filtrations.Cech.build" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the Cech filtration of a Euclidean point set for simplices up to order <cite>self.max_dim</cite>.</p>
+<dd><p>Compute the Cech filtration of a Euclidean point set for simplices up to order <code class="code docutils literal notranslate"><span class="pre">self.max_dim</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>X</strong> (<em>An Nxd array of N Euclidean vectors in d dimensions</em>) – </td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>X</strong> (<em>Nxd array</em>) – N Euclidean vectors in d dimensions</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>simplices</strong> (<em>Cech filtration for the data X</em>)</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><em>simplices</em> – Cech filtration for the data X</td>
 </tr>
 </tbody>
 </table>
@@ -113,6 +131,14 @@
 <dt id="cechmate.filtrations.Cech.diagrams">
 <code class="descname">diagrams</code><span class="sig-paren">(</span><em>simplices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cechmate.filtrations.Cech.diagrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute persistence diagrams for the simplices.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>simplices</strong> – simplices or filtration built from <code class="code docutils literal notranslate"><span class="pre">build</span></code> method.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>

@@ -67,13 +67,22 @@
 
 <span class="k">class</span> <span class="nc">BaseFiltration</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Base filtration that implements constructor and `diagrams` method.</span>
-
 <span class="sd">    &quot;&quot;&quot;</span>
-
-
+ 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;This init should show up inherited.</span>
+        <span class="sd">&quot;&quot;&quot; Default constructor</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        max_dim: int</span>
+<span class="sd">            Maximum dimension of simplices returned in constructed filtration.</span>
+<span class="sd">        verbose: boolean</span>
+<span class="sd">            If True, then print logging statements.</span>
+
 <span class="sd">        &quot;&quot;&quot;</span>
+
+
         <span class="bp">self</span><span class="o">.</span><span class="n">max_dim</span> <span class="o">=</span> <span class="n">max_dim</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">verbose</span>
 
@@ -82,6 +91,12 @@
 
     <span class="k">def</span> <span class="nf">diagrams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">simplices</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Compute persistence diagrams for the simplices.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+
+<span class="sd">        simplices: </span>
+<span class="sd">            simplices or filtration built from :code:`build` method.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">simplices</span> <span class="o">=</span> <span class="n">simplices</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">simplices_</span>

@@ -63,7 +63,7 @@
 
 <div class="viewcode-block" id="phat_diagrams"><a class="viewcode-back" href="../../reference/stubs/cechmate.solver.phat_diagrams.html#cechmate.solver.phat_diagrams">[docs]</a><span class="k">def</span> <span class="nf">phat_diagrams</span><span class="p">(</span><span class="n">simplices</span><span class="p">,</span> <span class="n">show_inf</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Do a custom filtration wrapping around phat</span>
+<span class="sd">    Compute the persistence diagram for :code:`simplices` using Phat.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    -----------</span>
@@ -77,8 +77,8 @@
 
 <span class="sd">    Returns</span>
 <span class="sd">    --------</span>
-<span class="sd">    dgms: A dictionary of persistence diagrams, where dgms[k] is </span>
-<span class="sd">          the persistence diagram for Hk </span>
+<span class="sd">    dgms: list of diagrams </span>
+<span class="sd">        the persistence diagram for Hk </span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1">## Convert simplices representation to sparse pivot column</span>
