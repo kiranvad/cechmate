@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>cechmate.filtrations.Rips &#8212; Cechmate 0.0.4 documentation</title>
+    <title>cechmate.filtrations.Rips &#8212; Cechmate 0.0.5 documentation</title>
     <link rel="stylesheet" href="../../_static/better.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -14,6 +14,8 @@
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="cechmate.filtrations.Cech" href="cechmate.filtrations.Cech.html" />
@@ -24,7 +26,7 @@
     <header id="pageheader">
       <h1>
         <a href="../../index.html ">
-          Cechmate 0.0.4 documentation
+          Cechmate 0.0.5 documentation
         </a>
         <a id="headermeta" href="https://scikit-tda.org">
             a scikit-tda project 
@@ -106,7 +108,7 @@
 <tr class="row-even"><td><a class="reference internal" href="#cechmate.filtrations.Rips.build" title="cechmate.filtrations.Rips.build"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build</span></code></a>(X)</td>
 <td>Compute the rips filtration of a Euclidean point set.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cechmate.filtrations.Rips.diagrams" title="cechmate.filtrations.Rips.diagrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diagrams</span></code></a>([simplices])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cechmate.filtrations.Rips.diagrams" title="cechmate.filtrations.Rips.diagrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diagrams</span></code></a>([simplices,&nbsp;show_inf])</td>
 <td>Compute persistence diagrams for the simplices.</td>
 </tr>
 </tbody>
@@ -129,13 +131,20 @@
 
 <dl class="method">
 <dt id="cechmate.filtrations.Rips.diagrams">
-<code class="descname">diagrams</code><span class="sig-paren">(</span><em>simplices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cechmate.filtrations.Rips.diagrams" title="Permalink to this definition">¶</a></dt>
+<code class="descname">diagrams</code><span class="sig-paren">(</span><em>simplices=None</em>, <em>show_inf=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cechmate.filtrations.Rips.diagrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute persistence diagrams for the simplices.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>simplices</strong> – simplices or filtration built from <code class="code docutils literal notranslate"><span class="pre">build</span></code> method.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>simplices</strong> – simplices or filtration built from <code class="code docutils literal notranslate"><span class="pre">build</span></code> method.</li>
+<li><strong>show_inf</strong> (<em>Boolean</em>) – Determines whether or not to return points that never die.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>dgms</strong> (<em>list of diagrams</em>) – the persistence diagram for Hk</p>
+</td>
 </tr>
 </tbody>
 </table>
